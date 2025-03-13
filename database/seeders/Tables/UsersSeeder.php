@@ -19,6 +19,7 @@ class UsersSeeder extends Seeder
          *
          */
 
+        DB::table("users")->truncate();
         $dataTables = [
             [
                 'id' => 1,
