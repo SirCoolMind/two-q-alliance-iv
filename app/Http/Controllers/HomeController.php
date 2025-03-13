@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = [
+            'totalCompany' => \App\Models\Company::count(),
+        ];
+        
+        return view('home', $data);
     }
 }

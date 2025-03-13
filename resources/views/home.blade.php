@@ -11,11 +11,11 @@
                     <div class="row justify-content-start">
                         <div class="col-md-8 pb-3">
                             <span>
-                                Total Company :
+                                Total Company : {{ $totalCompany }}
                             </span>
                         </div>
                         <div class="col-md-8">
-                            <a href="#your-module-link" class="btn btn-primary">
+                            <a href="{{ route('companies.index') }}" class="btn btn-primary">
                                 Go to this module <i class="bi bi-box-arrow-in-right"></i>
                             </a>
                         </div>
@@ -35,6 +35,7 @@
                         </div>
                     @endif
 
+                    {{ __('Hello') }} {{ Auth::user()->name }}.
                     {{ __('You are logged in!') }}
                 </div>
             </div>
